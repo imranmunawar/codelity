@@ -1,6 +1,7 @@
 
 <?php 
 class BinaryGap {
+	
 	public function solution($number) {
 		$maxGap = 0;
 		$counter = 0;
