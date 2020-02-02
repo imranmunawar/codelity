@@ -2,13 +2,13 @@
 <?php 
 class BinaryGap {
 	public function solution($number) {
-		$max = 0;
+		$maxGap = 0;
 		$counter = 0;
 		$isStartCount = false;
 		while($number > 0) {
 			if(($number & 1) == 1) {
 				if($isStartCount) {
-					$max = max($max, $counter);
+					$maxGap = max($maxGap, $counter);
 					$counter = 0;
 				} else {
 					$isStartCount = true;
@@ -21,7 +21,7 @@ class BinaryGap {
 			}
 			$number >>= 1;
 		}
-		return $max;
+		return $maxGap;
 	}
 }
 $obj = new BinaryGap();
